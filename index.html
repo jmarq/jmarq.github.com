@@ -3,8 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>James Marquardt on GitHub</title>
+	<script type="text/javascript" src="./jq/jquery-1.8.2.min.js"></script>
+	<link rel="stylesheet" href="./home.css" />
 </head>
 <body>
-	hello world, I am a placeholder.  watch in awe as I perform my duties flawlessly.
+	<p>hello world, I am a placeholder.  watch in awe as I perform my duties flawlessly.</p>
 </body>
+<script type="text/javascript">$(function(){
+$("body").toggle(500);$("body").toggle(1000);
+$('<div class="hello">There is some JQuery going on</div>').insertAfter('p').toggle(5000);
+
+
+
+});</script>
 </html>
+
+
