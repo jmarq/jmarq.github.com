@@ -1,0 +1,94 @@
+*{
+margin:0;
+padding:0;
+}
+
+#mainWrap{
+margin:10px;
+padding:0px;
+width:75em;
+height:53em;
+margin-left:auto;
+margin-right:auto;
+background-image:url("./flag.jpg");
+background-size: 75em 53em;
+position:relative;
+}
+
+body{
+margin:0px;
+padding:0px;
+}
+
+#loudWelcome h1{
+text-shadow: 10px -5px 13px black;
+text-align:center;
+font-size:11em;
+color:white;
+font-family:Arbutus;
+}
+
+#mainContent{
+
+position:absolute;
+bottom:3em;
+left:8em;
+margin-left:auto;
+margin-right:auto;
+bottom:2em;
+background-color:rgba(0,0,0,0.6);
+width:63em;
+height:16em;
+-webkit-border-radius:10px;
+}
+
+#goButton{
+width:8em;
+height:8em;
+float:right;
+position:relative;
+
+top:25%;
+}
+
+#goButton:hover #goChar{
+color: green;
+
+}
+#goButton #goChar{
+
+position:absolute;
+top:0;
+left:0;
+font-size:8em;
+color:rgba(255,255,255,0.6);
+}
+#goButton #goText{
+position:absolute;
+top:1.5em;
+left:0;
+font-size:2em;
+font-family:consolas;
+
+color:rgba(255,255,255,0.6);
+}
+
+#textGreeting{
+padding:1em;
+color:rgba(60,255,130,.8);
+font-size: 3em;
+font-family: VT323;
+}
+#textGreeting p{
+padding-bottom:.5em;
+margin-left:-.5em;
+}
+
+#goText a{
+text-decoration:none;
+}
+#goText a:visited{
+color:rgba(200,200,230,.8)
+
+}
+
