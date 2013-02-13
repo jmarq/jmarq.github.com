@@ -51,7 +51,7 @@ position:relative;
 top:25%;
 }
 
-#goButton:hover #goChar{
+#goButton:hover #goChar a{
 color: green;
 
 }
@@ -91,4 +91,10 @@ text-decoration:none;
 color:rgba(200,200,230,.8)
 
 }
+
+
+#goChar a{
+text-decoration:none;
+}
+
 
