@@ -13,6 +13,9 @@ margin-right:auto;
 background-image:url("./flag.png");
 background-size: 75em 53em;
 position:relative;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+border-radius:.8em;
 }
 
 body{
@@ -21,7 +24,7 @@ padding:0px;
 }
 
 #loudWelcome h1{
-text-shadow: 10px -5px 13px black;
+text-shadow: 7px -3px 8px black;
 text-align:center;
 font-size:11em;
 color:white;
@@ -40,6 +43,9 @@ background-color:rgba(0,0,0,0.6);
 width:63em;
 height:16em;
 -webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+box-shadow:5px 5px 5px #111;
 }
 
 #goButton{
@@ -118,16 +124,21 @@ z-index:2;
 left:25em;
 width: 1em;
 position:absolute;
-top: .15em;
+top: .18em;
 border:2px solid #222222;
 z-index:0;
 -webkit-transition:200ms ease-out;
 transition:200ms ease-out;
+opacity:0.4;
 }
 #goChar:hover img{
 left:-0.25em;
 -webkit-transition:200ms ease-out;
 transition:200ms ease-out;
+opacity:0.6;
+-webkit-border-radius:5px;
+-moz-border:radius:5px;
+border-radius:5px;
 }
 #goChar{position:relative; }
 
