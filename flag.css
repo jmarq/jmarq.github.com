@@ -55,6 +55,18 @@ top:25%;
 color: green;
 
 }
+#goButton:hover #goText a{
+color: #38b;
+
+}
+
+a{
+-webkit-transition:300ms ease-out;
+-moz-transition:300ms ease-out;
+transition:300ms ease-out;
+}
+
+
 #goButton #goChar{
 
 position:absolute;
