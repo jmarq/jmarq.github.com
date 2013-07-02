@@ -1,0 +1,144 @@
+*{
+margin:0;
+padding:0;
+}
+
+#mainWrap{
+margin:10px;
+padding:0px;
+width:75em;
+height:53em;
+margin-left:auto;
+margin-right:auto;
+background-image:url("./flag.png");
+background-size: 75em 53em;
+position:relative;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+border-radius:.8em;
+}
+
+body{
+margin:0px;
+padding:0px;
+}
+
+#loudWelcome h1{
+text-shadow: 7px -3px 8px black;
+text-align:center;
+font-size:11em;
+color:white;
+font-family:Arbutus;
+}
+
+#mainContent{
+
+position:absolute;
+bottom:3em;
+left:8em;
+margin-left:auto;
+margin-right:auto;
+bottom:2em;
+background-color:rgba(0,0,0,0.6);
+width:63em;
+height:16em;
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+box-shadow:5px 5px 5px #111;
+}
+
+#goButton{
+width:8em;
+height:8em;
+float:right;
+position:relative;
+left:1.5em;
+top:25%;
+}
+
+#goButton:hover #goChar a{
+color: green;
+
+}
+#goButton:hover #goText a{
+color: #38b;
+
+}
+
+a{
+-webkit-transition:300ms ease-out;
+-moz-transition:300ms ease-out;
+transition:300ms ease-out;
+}
+
+
+#goButton #goChar{
+
+position:absolute;
+top:0;
+left:0;
+font-size:8em;
+color:rgba(255,255,255,0.6);
+}
+#goButton #goText{
+position:absolute;
+top:1.5em;
+left:0;
+font-size:2em;
+font-family:consolas;
+
+color:rgba(255,255,255,0.6);
+}
+
+#textGreeting{
+padding:1em;
+color:rgba(60,255,130,.8);
+font-size: 3em;
+font-family: VT323;
+}
+#textGreeting p{
+padding-bottom:.5em;
+margin-left:-.5em;
+}
+
+#goText a{
+text-decoration:none;
+font-family:VT323;
+}
+#goText a:visited{
+color:rgba(200,200,230,.8)
+
+}
+
+
+#goChar a{
+text-decoration:none;
+position:absolute;
+z-index:2;
+
+
+}
+
+#goChar img{
+left:25em;
+width: 1em;
+position:absolute;
+top: .18em;
+border:2px solid #222222;
+z-index:0;
+-webkit-transition:200ms ease-out;
+transition:200ms ease-out;
+opacity:0.4;
+}
+#goChar:hover img{
+left:-0.25em;
+-webkit-transition:200ms ease-out;
+transition:200ms ease-out;
+opacity:0.6;
+-webkit-border-radius:5px;
+-moz-border:radius:5px;
+border-radius:5px;
+}
+#goChar{position:relative; }
+
