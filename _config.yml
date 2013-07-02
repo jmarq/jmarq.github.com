@@ -1,0 +1,4 @@
+name: James Marquardt's WebDev Blog
+pygments: true
+permalink: /:month/:title.html
+baseurl: / 
