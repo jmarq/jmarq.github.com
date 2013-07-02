@@ -4,7 +4,7 @@ grunt.initConfig({
   watch: {
     scss: {
       files: ['scss/*.scss'],
-      tasks: ['sass'],
+      tasks: ['sass:dist'],
       options: {
         // Start a live reload server on the default port 35729
       //  livereload: true,
@@ -23,7 +23,7 @@ grunt.initConfig({
 
   
     htmls:{
-        files:['_site/*.html'],
+        files:['_site/*.html','_site/css/*.css'],
 	    options:{livereload:true}	
 	}},
   sass:{
