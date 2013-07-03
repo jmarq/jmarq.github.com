@@ -2,13 +2,12 @@ module.exports = function(grunt) {
 
 grunt.initConfig({
   watch: {
+
+      options:{livereload:true},
+
     scss: {
       files: ['scss/*.scss'],
       tasks: ['sass:dist'],
-      options: {
-        // Start a live reload server on the default port 35729
-      //  livereload: true,
-      },
     },
      build:{
 	  files:['css/*.css','js/*.js','_layouts/*.html','*.html','_posts/*.md','_posts/*.markdown', '_posts/*.html'],
@@ -23,8 +22,7 @@ grunt.initConfig({
 
   
     htmls:{
-        files:['_site/*.html','_site/css/*.css'],
-	    options:{livereload:true}	
+        files:['_site/*/*'],
 	}},
   sass:{
 	dist:{
