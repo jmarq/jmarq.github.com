@@ -53,7 +53,13 @@ grunt.initConfig({
       options:{
         stdout:true
       }
-    }
+    },
+    post:{
+	command: "python jekyllPost.py",
+	options:{	
+	          stdout:true
+		}
+	}
   }
 
 

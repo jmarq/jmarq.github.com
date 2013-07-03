@@ -1,3 +1,5 @@
+#!/usr/bin/python2.7
+
 import datetime
 import os
 
@@ -33,7 +35,7 @@ print dateString + " " + timeString;
 title = raw_input( "\nTitle of Blog Post:  " );
 filenameTitle = raw_input( "\ntitleFor-File_name:  ");
 fileType = raw_input( "post file extension (including the '.'): " );
-filename = dateString + "-" + filenameTitle + fileType;
+filename = "_posts/" + dateString + "-" + filenameTitle + fileType;
 theFile = open( filename , "w" );
 theContent = "---\ntitle: " + title + "\nlayout: post\ndate: " + dateString + " " + timeString + "\n---\n";
 theFile.write(theContent);
