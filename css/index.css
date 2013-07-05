@@ -297,7 +297,7 @@ green     #859900  operators, other keywords
 /* Literal.Number.Integer.Long */
 body {
   background-color: #445;
-  color: orange; }
+  color: #ffc722; }
   body a {
     padding: 4px;
     background-color: #ccc;

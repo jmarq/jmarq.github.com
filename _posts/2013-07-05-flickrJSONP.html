@@ -1,0 +1,21 @@
+---
+title: Flickr JSONP
+layout: post
+date: 2013-07-05 02:09:04
+bgImage: none
+---
+<div id="innerPostWrap">
+	This post contains a script that grabs supposedly "pizza" photos from flickr and randomly chooses one to stretch across the background.  Google the term "jsonp" if you want to know about the method used to send the flickr data.
+	<script type="text/javascript">
+                photoUrl="";
+		$(function(){	
+	          jsonFlickrApi=function(data){
+		  randomPhoto=Math.floor(Math.random()*data.photos.photo.length);
+                  photoUrl=data.photos.photo[randomPhoto].url_m;
+		  $.backstretch(photoUrl);
+		 };
+
+	        $.ajax("http://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=afea87a0e0b6d02d2faa9cd594201f99&text=pizza&extras=url_m&format=json",{dataType:"jsonp"});
+	});
+	</script>
+</div>
