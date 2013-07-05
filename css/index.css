@@ -343,6 +343,10 @@ body {
     margin-right: auto;
     background-color: black;
     padding: 12px; }
+    body .postWrap p a {
+      display: inline;
+      border: 0px;
+      padding: 1px; }
     body .postWrap h2 {
       font-family: "Permanent Marker";
       text-align: center; }
