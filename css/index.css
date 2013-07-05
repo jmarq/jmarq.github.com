@@ -312,6 +312,8 @@ body {
     padding: 8px;
     -webkit-border-radius: 8px; }
     body .container ul {
+      list-style-type: none;
+      list-style-image: url("../images/star.png");
       width: 300px;
       margin-left: auto;
       margin-right: auto;
