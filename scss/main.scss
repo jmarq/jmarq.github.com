@@ -6,7 +6,7 @@ body{
 	color:orange + #222 ;
 	a{padding: 4px; background-color:#ccc; -webkit-border-radius:4px; border: 2px solid #246 }
         .container{
-		font-family:helvetica,arial,sans-serif,impact;
+		font-family:"Permanent Marker",helvetica,arial,sans-serif,impact;
 		width:600px;
 		margin-left:auto;
 		margin-right:auto;
@@ -28,6 +28,7 @@ body{
 
 			li{
 			  margin-bottom:12px;
+			  font-family:helvetica,arial,sans-serif;
 			}
 			
 		}
@@ -40,6 +41,7 @@ body{
 		width:400px;
 		margin-left:auto;
 		margin-right:auto;
+		text-shadow:3px 3px 3px #ffd050;
 	}
         
         a{
@@ -48,6 +50,7 @@ body{
 	h1{ text-align:center}
 
 	.postWrap{
+		font-family:helvetica,arial,sans-serif;
 		width:400px;
 		margin-top:8px;
 		margin-left:auto;
@@ -55,6 +58,7 @@ body{
 		background-color:black;
 		padding:12px;
 		h2{
+		  font-family:"Permanent Marker";
 		  text-align:center;
 		}
 	}

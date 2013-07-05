@@ -304,7 +304,7 @@ body {
     -webkit-border-radius: 4px;
     border: 2px solid #224466; }
   body .container {
-    font-family: helvetica,arial,sans-serif,impact;
+    font-family: "Permanent Marker",helvetica,arial,sans-serif,impact;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -322,18 +322,21 @@ body {
       padding-left: 24px;
       -webkit-border-radius: 8px; }
       body .container ul li {
-        margin-bottom: 12px; }
+        margin-bottom: 12px;
+        font-family: helvetica,arial,sans-serif; }
   body .header h1, body .header a, body header div {
     display: block;
     text-align: center;
     width: 400px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    text-shadow: 3px 3px 3px #ffd050; }
   body a {
     display: block; }
   body h1 {
     text-align: center; }
   body .postWrap {
+    font-family: helvetica,arial,sans-serif;
     width: 400px;
     margin-top: 8px;
     margin-left: auto;
@@ -341,6 +344,7 @@ body {
     background-color: black;
     padding: 12px; }
     body .postWrap h2 {
+      font-family: "Permanent Marker";
       text-align: center; }
   body .footer {
     width: 300px;
