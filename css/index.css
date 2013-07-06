@@ -302,7 +302,10 @@ body {
     padding: 4px;
     background-color: #ccc;
     -webkit-border-radius: 4px;
-    border: 2px solid #224466; }
+    border: 2px solid #246; }
+    body a:hover, body a:focus {
+      background-color: #ddeeff;
+      border: 2px solid #ffc744; }
   body .container {
     font-family: "Permanent Marker",helvetica,arial,sans-serif,impact;
     width: 600px;

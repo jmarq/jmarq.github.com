@@ -4,7 +4,16 @@
 body{
 	background-color:#445;
 	color:orange + #222 ;
-	a{padding: 4px; background-color:#ccc; -webkit-border-radius:4px; border: 2px solid #246 }
+	a{
+	  padding: 4px;
+	   background-color:#ccc;
+           -webkit-border-radius:4px;
+            border: 2px solid #246;
+	   &:hover, &:focus{
+		   background-color:#ccc + #124;
+		   border:2px solid orange + #124;
+		}
+	 }
         .container{
 		font-family:"Permanent Marker",helvetica,arial,sans-serif,impact;
 		width:600px;

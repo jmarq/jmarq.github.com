@@ -1,0 +1,19 @@
+---
+title: Serving JSONP
+layout: post
+date: 2013-07-06 14:12:14
+bgImage: /images/Arizona171.jpg
+---
+
+I have a file hosted elsewhere that contains:
+{% highlight javascript %}
+jsonp({text:"Hello From JSONP Server"});
+{% endhighlight %}
+This post has a script embedded that makes an http request to that file,
+grabs the contents, and executes it as a normal javascript function call. Earlier in the script there is a function defined called jsonp, which will get triggered by the content of the file hosted on another domain, resulting in an alert box.  
+<script type="text/javascript">
+  jsonp=function(data){alert(data.text)};
+  $(function(){
+  $.ajax("http://198.58.100.162/hello.jsonp",{dataType:"jsonp",callback:"jsonp"});});
+</script> 
+
