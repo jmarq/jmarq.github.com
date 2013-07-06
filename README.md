@@ -1,5 +1,5 @@
 <h1>What is all of this?</h1>
-<p>well, there is a jekyll blog setup 
+<p>well, there is a jekyll blog setup (so you'll need ruby installed and the jekyll gem) 
 	<ul>
 		<li>/_posts</li>
 		<li>/_layouts</li>
