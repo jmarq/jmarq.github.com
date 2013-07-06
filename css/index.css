@@ -343,6 +343,8 @@ body {
     margin-right: auto;
     background-color: black;
     padding: 12px; }
+    body .postWrap #postDate {
+      text-align: center; }
     body .postWrap p a {
       display: inline;
       border: 0px;
