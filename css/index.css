@@ -301,11 +301,15 @@ body {
   body a {
     padding: 4px;
     background-color: #ccc;
+    background-image: -webkit-linear-gradient(bottom, #aaaaaa 15%, #bbbbbb 58%, #cccccc 79%);
     -webkit-border-radius: 4px;
+    border-radius: 4px;
     border: 2px solid #246; }
     body a:hover, body a:focus {
       background-color: #ddeeff;
-      border: 2px solid #ffc744; }
+      border: 2px solid #ffc744;
+      background-image: -webkit-linear-gradient(bottom, #bbccee 15%, #ccddff 58%, #ddeeff 79%);
+      box-shadow: inset 0px 0px 15px #ffb600; }
   body .container {
     font-family: "Permanent Marker",helvetica,arial,sans-serif,impact;
     width: 600px;
@@ -313,27 +317,33 @@ body {
     margin-right: auto;
     background-color: #222;
     padding: 8px;
-    -webkit-border-radius: 8px; }
+    -webkit-border-radius: 8px;
+    border-radius: 8px; }
     body .container ul {
-      list-style-type: none;
-      list-style-image: url("../images/star.png");
+      list-style-type: square;
       width: 300px;
       margin-left: auto;
       margin-right: auto;
       background-color: #437;
       padding: 12px;
       padding-left: 24px;
-      -webkit-border-radius: 8px; }
+      -webkit-border-radius: 8px;
+      border-radius: 8px; }
       body .container ul li {
         margin-bottom: 12px;
         font-family: helvetica,arial,sans-serif; }
+        body .container ul li:hover, body .container ul li:focus {
+          list-style-type: circle; }
   body .header h1, body .header a, body header div {
     display: block;
     text-align: center;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 3px 3px 3px #ffd050; }
+    text-shadow: 3px 3px 3px #ffd050;
+    -moz-text-shadow: 3px 3px 3px #ffd050; }
+    body .header h1:hover, body .header a:hover, body header div:hover {
+      text-shadow: 3px 2px 3px #ff9d72; }
   body a {
     display: block; }
   body h1 {
