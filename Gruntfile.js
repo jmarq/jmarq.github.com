@@ -34,7 +34,7 @@ grunt.initConfig({
 },
 
 	connect:{
-		dist:{
+		site:{
 		  options:{
 		  keepalive:true,
 	          hostname:'0.0.0.0',
