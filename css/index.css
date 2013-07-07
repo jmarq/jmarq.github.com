@@ -302,6 +302,7 @@ body {
     padding: 4px;
     background-color: #ccc;
     background-image: -webkit-linear-gradient(bottom, #aaaaaa 15%, #bbbbbb 58%, #cccccc 79%);
+    background-image: linear-gradient(0deg, #aaaaaa 15%, #bbbbbb 58%, #cccccc 79%);
     -webkit-border-radius: 4px;
     border-radius: 4px;
     border: 2px solid #246; }
@@ -309,6 +310,7 @@ body {
       background-color: #ddeeff;
       border: 2px solid #ffc744;
       background-image: -webkit-linear-gradient(bottom, #bbccee 15%, #ccddff 58%, #ddeeff 79%);
+      background-image: linear-gradient(0deg, #bbccee 15%, #ccddff 58%, #ddeeff 79%);
       box-shadow: inset 0px 0px 15px #ffb600; }
   body .container {
     font-family: "Permanent Marker",helvetica,arial,sans-serif,impact;
