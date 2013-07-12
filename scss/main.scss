@@ -110,3 +110,14 @@ body{
 	}
 }
 
+@media (max-width: 600px){
+ div.container{width:400px;}
+ div.postWrap{width:300px;}
+ h1 a{font-size:0.9em; padding:0;}}
+
+@media(max-width: 400px){
+  div.container{width:300px;}
+  div.postWrap{width: 220px;}
+  div.container ul{width: 200px;}
+ h1.title a{width:300px; margin:0;} 
+}
