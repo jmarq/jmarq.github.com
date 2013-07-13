@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>{{ page.title }}</title>
+<!-- you deleted the viewport meta tag!! you might need to put it back -->
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="{{site.baseurl}}css/syntax.css">
+	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{site.baseurl}}css/indexAlt.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+	<div class="site">
+            <div class="header">
+              <h1 class="title"><a href="{{site.baseurl}}">{{ site.name }}</a></h1>
+            </div>
+
+                {{ content }}
+
+            <div class="footer">
+	      <img src="{{page.bgImage}}"></img>
+              <div class="contact">
+                <p>
+                  James Marquardt<br />
+                  Web Developer<br />
+                  marquardtjames@gmail.com
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/jmarq/">github.com/jmarq</a>
+                  <a href="http://twitter.com/2mando/">twitter.com/2mando</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+    </body>
+	
+</html>
