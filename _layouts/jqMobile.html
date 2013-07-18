@@ -10,48 +10,16 @@
         <link rel="stylesheet" href="{{site.baseurl}}css/syntax.css">
 	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{site.baseurl}}css/index.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+        <link rel="stylesheet" href="{{site.baseurl}}css/mobile.css">
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 
     </head>
     <body>
-        <div class="container">
-	<div class="site">
-            <div class="header">
-              <h1 class="title"><a href="{{site.baseurl}}">{{ site.name }}</a></h1>
-            </div>
 
                 {{ content }}
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  James Marquardt<br />
-                  Web Developer<br />
-                  marquardtjames@gmail.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/jmarq/">github.com/jmarq</a>
-                  <a href="http://twitter.com/2mando/">twitter.com/2mando</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-	<script type="text/javascript">
-		$(function(){
-		  if("{{page.bgImage}}"){
-		    $.backstretch("{{page.bgImage}}");
-		  }
-		  else{
-		   
-		    $.backstretch("http://lorempixel.com/800/600"); 
-		   }
-		});
-	</script>
     </body>
 	
 </html>
