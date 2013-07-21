@@ -1,0 +1,29 @@
+---
+layout: jqMobile
+title: James Marquardt's WebDev Blog
+bgImage: http://fc09.deviantart.net/fs70/f/2010/175/3/c/Never_Ending_Pattern_by_Terreflare.gif 
+---
+	<div data-role="page" id="index">
+        <div data-role="header">
+          <span>Mobile Index</span>
+          <h2>James Marquardt's Webdev Blog</h2>
+        </div>
+        <div data-role="content">
+	   <a href="#{{site.posts[0].path | remove : "_posts/" | remove: ".html" | remove: ".md"}}">link to first post?</a>
+        </div>
+      </div>
+
+    {% for post in site.posts %}
+      <div data-role="page" id="{{post.path | remove: "_posts/"| remove:".html" | remove: ".md"}}">
+	<div data-role="header">
+	  <span>{{ post.date | date_to_string }}</span> &raquo; 
+          <h2>{{ post.title }}</h2>
+	</div>
+	<div data-role="content">
+	  {{post.content}}
+	</div>
+	<p>
+	<a class="prevPost" href="#{{post.previous.path | remove: "_posts/"| remove:".html" | remove: ".md"}}">previous post</a>
+	</p>
+      </div>
+    {% endfor %}
