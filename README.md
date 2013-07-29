@@ -1,4 +1,4 @@
-<h2><a href="http://jmarq.github.io/basketball_charts">See it here</a></h2>
+<h2><a href="http://jmarq.github.io/">See it here</a></h2>
 <h1>What is all of this?</h1>
 <p>well, there is a jekyll blog setup (so you'll need ruby installed and the jekyll gem) 
 	<ul>
