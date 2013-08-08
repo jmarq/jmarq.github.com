@@ -17,3 +17,5 @@ node.js installed as well as the npm node package manager. Additionally you need
 <h3>Tasks?</h3>
 Yeah, things like automatically running sass on some scss files when they change and running a livereload server that lets you see changes in the browser right after they occur in the files, without hitting refresh.  Jekyll blogs need to be rebuilt when their content changes.  This grunt setup does that automatically when any of the input files change. When the output files change, the livereload server can refresh your testing browser automatically.  When this is all triggered by a pre-compilation .scss file being changed and saved, the results can be satisfying.
 </p> 
+
+<p>why didn't that last update work? "page build failed"?  why? hmm....</p>
