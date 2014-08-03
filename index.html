@@ -5,10 +5,47 @@
   <title>Patient Man Ride Donkey</title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="index.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+  <script src="nv.d3.min.js"></script>
 </head>
 <body>
   
   <h1 class="centerText">:-)</h1>
-  <h1 class="shout">Cool out, brothers and sisters.  This page will become something else soon enough.  A transition period is an interesting time.</h1>
+  <h1 class="shout">This page will become something else soon enough.  A transition period is an interesting time.</h1>
+  <div id="chart">
+    <svg></svg>
+  </div>
+
+<script>
+
+var data= [
+];
+
+
+var numSlices=7;
+for( var i=0; i<numSlices; i+=1 ){
+  data.push({
+    label:""+(i+1),
+    value: Math.ceil(Math.random()*1000000)
+  })
+}
+
+
+
+  nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(false).showLegend(false);
+
+    d3.select("#chart svg")
+        .datum(data)
+      .transition().duration(1200)
+        .call(chart);
+
+  return chart;
+});
+</script>
+
 </body>
 </html>
