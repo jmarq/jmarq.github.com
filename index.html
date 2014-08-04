@@ -15,26 +15,31 @@
   <div id="chart">
     <svg></svg>
   </div>
+ 
 
 <script>
 
 var data= [
 ];
 
+var secs=new Date().getSeconds();
+var til60=60-secs;
 
-var numSlices=7;
-for( var i=0; i<numSlices; i+=1 ){
-  data.push({
-    label:""+(i+1),
-    value: Math.ceil(Math.random()*1000000)
-  })
-}
+data=[
+    {label:"seconds", value: secs},
+    {label:"til60", value: til60}
+
+    ]
+
+
+
 
 
 //how do I update the chart with new data?  call call(chart) again? after doing datum again??
 
-  nv.addGraph(function() {
-  var chart = nv.models.pieChart()
+ 
+  var pieChart=nv.addGraph(function() {
+       chart = nv.models.pieChart()
       .x(function(d) { return d.label })
       .y(function(d) { return d.value })
       .showLabels(false).showLegend(false);
@@ -46,6 +51,31 @@ for( var i=0; i<numSlices; i+=1 ){
 
   return chart;
 });
+
+  var newData=function(){
+    var chart=nv.graphs[0];
+    
+    var data=[];
+    var secs=new Date().getSeconds();
+    var til60=60-secs;
+
+    data=[
+    {label:"seconds", value: secs},
+    {label:"til60", value: til60}
+
+    ]
+    
+    d3.select("#chart svg")
+        .datum(data)
+      .transition().duration(100)
+        .call(chart);
+
+  
+  };
+
+  setInterval(newData,1000);
+ 
+  
 </script>
 
 </body>
