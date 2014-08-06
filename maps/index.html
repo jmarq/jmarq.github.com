@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="gmaps.js"></script>
+</head>
+<body>
+
+  <style>
+    #map1{
+      width:800px;
+      height: 600px;
+    }
+  
+  </style>
+  maps?
+
+  <div id="map1">
+
+  </div>
+</body>
+<script>
+ 
+  var campData;
+  var campMeta;
+  var map1;
+  $.ajax("https://data.illinois.gov/api/views/ih8w-me9g/rows.json").then(function(d){
+    campData=d.data;
+    campMeta=d.meta;
+    console.log(campData[0]);
+    campMarkerData=campData.map(function(d){
+      return({
+        title: d[8],
+        lat: Number(d[15][1]),
+        lng: d[15][2],
+        infoWindow:{
+          content: d[8]
+        },
+        icon: {url:'http://upload.wikimedia.org/wikipedia/commons/1/1d/Smile_icon_32x32.png'}
+      })
+    });
+    console.log(campMarkerData);
+    map1.addMarkers(campMarkerData);
+    
+  });
+
+map1=new GMaps({
+  div: '#map1',
+  lat: -12.043333,
+  lng: -77.028333
+});
+  
+
+</script>
+
+</html>
