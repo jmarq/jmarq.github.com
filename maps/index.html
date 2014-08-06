@@ -10,14 +10,28 @@
 <body>
 
   <style>
+
+
+    body{
+      background-color: #222822
+    }
+  
+    h1{
+      color: #abc;
+      text-align:center;
+      font-family: sans-serif;
+    }
+
     #map1{
       width:800px;
       height: 600px;
+      margin-left:auto;
+      margin-right: auto;
     }
   
   </style>
-  maps?
 
+  <h1>camping areas in Illinois</h1>
   <div id="map1">
 
   </div>
@@ -39,7 +53,7 @@
         infoWindow:{
           content: d[8]
         },
-        icon: {url:'http://upload.wikimedia.org/wikipedia/commons/1/1d/Smile_icon_32x32.png'}
+        icon: {url:'http://www.sceneryitems.com/Images/Tree-icon.png'}
       })
     });
     console.log(campMarkerData);
@@ -49,8 +63,10 @@
 
 map1=new GMaps({
   div: '#map1',
-  lat: -12.043333,
-  lng: -77.028333
+  lat: 40.4842,
+  lng: -88.9936,
+  zoom: 6,
+  mapType:"satellite"
 });
   
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/chroma-js/0.5.7/chroma.min.js"></script>
+</head>
+<body>
+  <style>
+    body{
+      background-color: #e4e4e4;
+
+    }
+    
+    #weather{
+      font-family: "sans-serif";
+      font-size: 2.0em;
+      width: 50%;
+      margin-left: auto;
+      margin-right:auto;
+      padding: 10px 15px 15px 15px;
+    }
+  </style>
+ <div id="weather"></div>
+  <script>
+
+    var colorScale=chroma.scale(['#019','#f30']);
+    
+  
+    $.simpleWeather({
+  location: '90210',
+  unit: 'f',
+  success: function(weather) {
+    html = '<h4> weather for '+weather.city+', '+weather.region+'</h4>';
+    html += '<h1>'+weather.temp+'&deg; '+weather.units.temp+'<br /><span>'+weather.currently.toLowerCase()+'</span></h1>';
+ 
+    $("#weather").html(html);
+    $("#weather").css({color:colorScale(weather.temp/110), border:"5px solid "+colorScale(weather.temp/100)});
+  },
+  error: function(error) {
+    $("#weather").html("<p>"+JSON.stringify(error)+"</p>");
+  }
+});
+
+  </script>
+</body>
+</html>
