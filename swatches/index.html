@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Swatches</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="jquery.swatches.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
+  <link rel="stylesheet" href="swatches.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="combo2">
+  <header class="combo1">
+    <h1>Color Combo #1</h1>
+  </header>
+  <div class="blurb">
+    Color Combo #2?
+  </div>
+  <div class="blurb accentText">
+    this might be the accent color
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="swatch" data-name="Barcelona" data-colors="#27282D,#474D4B,#F54296,#E0F635,#FDFFF7"></div>
+            <div class="swatch" data-name="Blue Humans" data-colors="#294052,#447294,#8FBCDB,#F4D6BC,#F8E4CC"></div>
+            <div class="swatch" data-name="Buried at the Beach" data-colors="#886655,#DD9977,#EECCAA,#EEEEEE,#CC99CC"></div>
+            <div class="swatch" data-name="Raptorize" data-colors="#070A1E,#382230,#58423F,#888069,#C1BF95"></div>
+            <div class="swatch" data-name="Cthulhu Rises" data-colors="#553333,#99aaaa,#998866,#cccc99,#aabbaa"></div>
+            <div class="swatch" data-name="Boring Volcano" data-colors="#223333,#889999,#dd9988,#ddeedd,#bbcccc"></div>
+            <div class="swatch" data-name="Light the Sky" data-colors="#332244,#bb3355,#998899,#ff5555,#ffdd99"></div>
+            <div class="swatch" data-name="Hackers" data-colors="#FF6600,#F6F6EF,#828282,#000000"></div>
+            <div class="swatch" data-name="Attack of the Mac" data-colors="#445555,#889999,#4499DD,#DDDDDD,#AACCCC"></div>
+            <div class="swatch" data-name="Tracert" data-colors="#2B2B2D,#166622,#2FBB4F,#922729"></div>
+            <div class="swatch" data-name="City by Night" data-colors="#332244,#5566aa,#aa7799,#dd9999,#ffdd99"></div>
+            <div class="swatch" data-name="Wicked Witch" data-colors="#334444,#99aa88,#bbbbaa,#ddddcc,#ccccbb"></div>
+            <div class="swatch" data-name="Flying Monkeys" data-colors="#444466,#6666aa,#8888aa,#8877dd,#ccbbff"></div>
+            <div class="swatch" data-name="Searching" data-colors="#4D90FE,#DD4B39,#F1F1F1,#777777"></div>
+            <div class="swatch" data-name="Office Chair in the Clouds" data-colors="#555588,#6688DD,#FFEEFF,#DDCCEE,#BBBBDD"></div>
+            <div class="swatch" data-name="Born to be a Winner" data-colors="#3366BB,#CCCCCC,#EEEEEE,#DDDDEE,#FFDD11"></div>
+            <div class="swatch" data-name="1969" data-colors="#443344,#aa5555,#668899,#dd8855,#cccccc"></div>
+            <div class="swatch" data-name="Teapots" data-colors="#333355,#4455aa,#997777,#5577dd,#dd9977"></div>
+
+    </div>
+  </div>
+
+<script>
+  $('.swatch').swatchify();
+  //combo1=0&4
+  //combo2=1&3
+  //accent=2
+  var applyColors=function(clickEvent){
+    var colors=$(this).data().colors.split(",");
+    $(".combo1").css({color:colors[4], backgroundColor:colors[0]});
+    $(".combo2").css({color:colors[3], backgroundColor:colors[1]});
+    $(".accentText").css({color:colors[2]});
+    $(".accentBackground").css({backgroundColor:colors[2]});
+    //color .info, because it is colored by swatches.css, won't match rest unless you change it
+    $(".combo2 .info").css({color:colors[3], backgroundColor:colors[1]});
+  }
+  $(".swatch").click(applyColors);
+</script>
+</body>
+</html>
