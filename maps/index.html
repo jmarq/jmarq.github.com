@@ -49,9 +49,9 @@
       return({
         title: d[8],
         lat: Number(d[15][1]),
-        lng: d[15][2],
+        lng: Number(d[15][2]),
         infoWindow:{
-          content: d[8]
+          content: d[8]+"</br>"+"<a href='http://jmarq.github.io/weather/?pos="+Number(d[15][1])+","+Number(d[15][2])+"'>weather</a>"
         },
         icon: {url:'http://www.sceneryitems.com/Images/Tree-icon.png'}
       })

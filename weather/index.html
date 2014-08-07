@@ -25,12 +25,35 @@
   </style>
  <div id="weather"></div>
   <script>
+  
+    var qString=window.location.search;
+    qString=qString.slice(1);//get rid of ?;
+    var paramPairs=qString.split("&");
+    locationParam="";
+    var coords="";
+    for(var i=0; i < paramPairs.length; i+=1){
+      if(paramPairs[i].slice(0,4)=="pos="){
+        locationParam=paramPairs[i];
+      }
+    } 
+
+    if(locationParam){
+      console.log(locationParam);
+      coords=locationParam.split("=")[1];
+      console.log(coords);
+      if(coords[coords.length-1]=="/"){
+        console.log("popping off the '/'");
+        coords=coords.slice(0,coords.length-1);
+      }
+      console.log(coords);
+    }
 
     var colorScale=chroma.scale(['#019','#f30']);
     
-  
+    weatherLocation=coords? coords : '90210'; 
+    console.log(weatherLocation);
     $.simpleWeather({
-  location: '90210',
+  location: weatherLocation,
   unit: 'f',
   success: function(weather) {
     html = '<h4> weather for '+weather.city+', '+weather.region+'</h4>';
