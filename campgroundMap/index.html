@@ -44,7 +44,7 @@
   
   </style>
 
-  <h1>Camping areas in Illinois</h1>
+  <h1>Licensed Campgrounds in Illinois</h1>
   <h4>
     <a href="https://data.illinois.gov/Public-Health/IDPH-Licensed-Campgrounds/ih8w-me9g">Source: State of Illinois Data Portal</a>
   </h4>
@@ -61,6 +61,12 @@
     campData=d.data;
     campMeta=d.meta;
     console.log(campData[0]);
+
+    var markerClick=function(){
+      console.log("marker clicked, about to log 'this'");
+      console.log(this);
+     // this.setIcon("http://www.rocklincov.org/assets/images/icons/Food-Pizza_50x50.jpg");
+    }
     campMarkerData=campData.map(function(d){
       return({
         title: d[8],
@@ -69,11 +75,15 @@
         infoWindow:{
           content: d[8]+"</br>"+"<a href='http://jmarq.github.io/weather/?pos="+Number(d[15][1])+","+Number(d[15][2])+"'>weather</a>"
         },
-        icon: {url:'http://www.sceneryitems.com/Images/Tree-icon.png'}
+        icon: {url:'http://www.sceneryitems.com/Images/Tree-icon.png'},
+        click: markerClick
       })
     });
     console.log(campMarkerData);
-    map1.addMarkers(campMarkerData);
+    theMarkers=map1.addMarkers(campMarkerData);
+    console.log("about to log what might be a list of markers...");
+    console.log(theMarkers);
+    console.log("did anything show up?");
     
   });
 
